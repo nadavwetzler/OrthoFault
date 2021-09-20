@@ -5,7 +5,7 @@ close all
 
 [filepath,~,~] = fileparts(which('run_3D_strain.m'));
 cd(filepath)
-cd('data')
+cd('../data')
 
 %% Parameters and data
 
