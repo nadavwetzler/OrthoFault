@@ -1,7 +1,8 @@
 # OrthoFault
 by Nadav Wetzler and Ze'ev Reches
 
-The codes provides a numeric tool to predic the faulting orientation based on a series of three dimensional stress states.
+The codes provides a numeric tool to predic the faulting orientation based on energy balancing method between the applied stress and internal dissipate energy by faulting.
+We use a series of stress states from three dimensional experiments to show the predicted faulting patterns.
 
 # Input
 The progrem loads experiment stress data, the Young modulus and Poisson modules. See 14 datasets in the 'Data' direcory that are obtained from experimental datasets (see reference list).
