@@ -110,7 +110,7 @@ hp(2) = plot(NaN,NaN,'-r');
 hp(3) = plot(NaN,NaN,'-b');
 hp(4) = plot(NaN,NaN,'--b');
 hp(5) = plot(NaN,NaN,'-m');
-legend(hp,'Coulumb criterion fault','Preferred faults with slip axes','Selected fault','Selected fault in orthorhombic pattern','location','southoutside')
+legend(hp(1:4),'Coulumb criterion fault','Preferred faults with slip axes','Selected fault','Selected fault in orthorhombic pattern','location','southoutside')
 
 %% F
 axF = subplot(4,4,[10,14]);
