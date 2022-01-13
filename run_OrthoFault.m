@@ -9,20 +9,21 @@ cd(filepath)
 cd('data')
 
 %% Parameters and data
-% filename = 'KTB-amphibolite-3D.txt'; YM = 95000;PM = 0.26; % (1)
-% filename = 'Yuubari-shale2.txt'; YM = 15000;PM = 0.2;   % (2)
-% filename = 'Dunham-dolomite.txt'; YM = 111000;PM = 0.22; % (3)
-% filename = 'Mount-Scott granite.txt'; YM = 78000; PM = 0.22; % (4)
-filename = 'Shirahama-sandstone.txt';YM = 11500;PM = 0.38; % (5)
-% filename = 'Solenhofen-limestone.txt'; YM = 72500;PM = 0.34; % (6)
-% filename = 'Westerly-granite-Haimson.txt'; YM = 70000;PM = 0.2; % (7)
-% filename = 'Westerly-granite-Mogi-compression.txt'; YM = 70000;PM = 0.2; % (8)
-% filename = 'Westerly-granite-Mogi-extension.txt'; YM = 70000;PM = 0.2; % (9)
-% filename = 'Maha-Sarakham-salt.txt'; YM = 22200;PM = 0.37; % (10)
-% filename = 'Berea-sandstone.txt'; YM = 11000;PM = 0.2; % (11)
-% filename = 'Tautona-quartzite-triaxial-v2.txt'; YM = 76800; PM = 0.21; % (12)
-% filename = 'Carrara-marble-v2.txt'; YM = 40000;PM = 0.28; % (13)
-% filename = 'Stripa granite.txt'; YM = 84000;PM = 0.22; % (14)
+% The data sources are numbered by the reference nuber in Wetzler and Reches (2022)
+% filename = 'KTB-amphibolite.txt'; YM = 95000;PM = 0.26; % (1) Source: 11 
+% filename = 'Yuubari-shale.txt'; YM = 15000;PM = 0.2;   % (2) Source: 11
+% filename = 'Dunham-dolomite.txt'; YM = 111000;PM = 0.22; % (3) Source: 11
+% filename = 'Mount-Scott granite.txt'; YM = 78000; PM = 0.22; % (4) Source: 24
+filename = 'Shirahama-sandstone.txt';YM = 11500;PM = 0.38; % (5) Source: 11
+% filename = 'Solenhofen-limestone.txt'; YM = 72500;PM = 0.34; % (6) Source: 11
+% filename = 'Westerly-granite-3D.txt'; YM = 70000;PM = 0.2; % (7) Source: 23 
+% filename = 'Westerly-granite-triaxial.txt'; YM = 70000;PM = 0.2; % (8) Source: 21
+% filename = 'Westerly-granite-extension.txt'; YM = 70000;PM = 0.2; % (9) Source: 21
+% filename = 'Maha-Sarakham-salt.txt'; YM = 22200;PM = 0.37; % (10) Source: 26
+% filename = 'Berea-sandstone.txt'; YM = 11000;PM = 0.2; % (11) Source: 22
+% filename = 'Tautona-quartzite.txt'; YM = 76800; PM = 0.21; % (12) Source: 27
+% filename = 'Carrara-marble.txt'; YM = 40000;PM = 0.28; % (13) Source: 25 
+% filename = 'Stripa granite.txt'; YM = 84000;PM = 0.22; % (14) Soure: 28
 
 
 %% Selected a plane 
@@ -36,17 +37,4 @@ DAT = OrthoFault(DAT,PM,YM);
 
 %% Plot result
 PlotResults3DStrainA(DAT,ip)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
