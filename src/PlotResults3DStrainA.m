@@ -53,20 +53,25 @@ legend(hp,'Coulumb conjugate set','Preferred faults with slip axes','Orthorhombi
 
 %% B
 axB = subplot(4,4,[2,6]);
-fpower = fit(S1, DAT.w,'b*x^m','StartPoint',[1e-04,2]);
-x = linspace(min(S1), max(S1),20);
+% S1s = S1.^2 / DAT.YM;
+fpower = fit(DAT.I1_2E, DAT.w,'b*x^m','StartPoint',[1e-04,2]);
+% linS1s = polyfit(S1s, DAT.w,1);
+x = linspace(min(DAT.I1_2E), max(DAT.I1_2E),20);
 hold on
-hp(1) = scatter(S1,DAT.w,30,'filled','g');
-hp(2) = scatter(S1,DAT.W,30,'filled','m');
+hp(1) = scatter(DAT.I1_2E,DAT.w,30,'filled','g');
+hp(2) = scatter(DAT.I1_2E,DAT.W,30,'filled','m');
 hp(3) = plot(x, fpower.b.*x.^fpower.m,'linewidth',2);
-txt_powr = ['Power Fit: y = ',num2str(fpower.b,3),' X^{',num2str(fpower.m,3),'}'];
+% hp(3) = plot(x, linS1s(1).*x + linS1s(2),'linewidth',2);
+% txt_powr = ['Power Fit: y = ',num2str(linS1s(1),3),' X+{',num2str(linS1s(2),3),'}'];
+txt_powr = ['Power Fit: y = ',num2str(fpower.b,3),'*X^{',num2str(fpower.m,3),'}'];
 
 legend(hp,'Applied elastic energy','Dissipated energy',txt_powr,'location','northwest')
 box on
 grid on
 axis square
 % xlabel('Normal stress (MPa)')
-xlabel('\sigma1 (MPa)')
+% xlabel('\sigma1^2 /E')
+xlabel('I_1^2 /(2E)')
 ylabel('Energy (MJ/m^3)')
 %% C
 axC = subplot(4,4,[3,7]);
