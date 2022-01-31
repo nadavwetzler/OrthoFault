@@ -1,11 +1,12 @@
 function [DAT] = OrthoFault(DAT,PM,YM)
 N1_range = 0.02:0.05:0.6;
 N2_range = 0.02:0.05:0.6;
-
+DAT.YM = YM;
+DAT.PM = PM;
 [DAT.G, DAT.Lambda] = calcModulus(PM,YM);
 
 % Invariants
-[I1_2E, SQRT_J2, I2_2] = calcInvariants(DAT.sigma123,PM,YM);
+[DAT.I1_2E, DAT.SQRT_J2, DAT.I2_2] = calcInvariants(DAT.sigma123,PM,YM);
 
 % elastic starins J:L
 e = calcEstrain(DAT.sigma123, PM,YM);
